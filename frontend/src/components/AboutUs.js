@@ -20,7 +20,7 @@ function AboutUs() {
             </div>
             <div className="flex flex-col sm:flex-row mt-10">
               <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-lightBrown bg-opacity-10 border-2 border-solid border-darkSage border-opacity-80 text-logo">
+                <div className="w-20 h-20 rounded-full inline-flex items-center justify-center border-2 border-solid border-darkSage border-opacity-80 text-logo">
                   <img src={Logo} alt="logo" />
                 </div>
                 <div className="flex flex-col items-center text-center justify-center">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function FAQ() {
   return (
@@ -13,7 +14,11 @@ function FAQ() {
               <p className="text-base leading-relaxed font-lato text-darkGreen xl:w-2/4 lg:w-3/4 mx-auto">
                 some frequently asked questions answered here for your
                 convenience! if you have any other inquiries, please submit a
-                message through our contact form!
+                message through our{' '}
+                <span className="font-bold text-darkSage">
+                  <Link to="/contact">contact form</Link>
+                </span>
+                !
               </p>
             </div>
             <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">

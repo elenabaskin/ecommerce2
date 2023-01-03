@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <div>
-      <header className="text-gray-600 body-font pt-1 bg-white bg-opacity-50">
+      <header className="text-gray-600 body-font pt-1 bg-white bg-opacity-20">
         <div className=" container mx-auto rounded-lg border-solid border-2 border-darkSage border-opacity-50 flex flex-wrap p-5 flex-col bg-white bg-opacity-80 top-0 z-50 md:flex-row items-center">
           <Link
             className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"

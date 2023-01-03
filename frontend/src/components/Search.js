@@ -13,11 +13,11 @@ function Search({ setActiveCategory, activeCategory, setFiltered, products }) {
   }, [activeCategory]);
   return (
     <div>
-      <div className="flex content-center items-center mx-auto">
+      <div className="flex content-center items-center mx-auto w-full">
         <div className="flex mr-4">
           <button
             onClick={() => setActiveCategory('*')}
-            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
+            className="text-xs p-1 text-darkGreen border border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightGrey focus:ring-2 hover:bg-lightSage hover:underline active:bg-grayGreen active:font-extrabold"
           >
             all
           </button>
@@ -25,7 +25,7 @@ function Search({ setActiveCategory, activeCategory, setFiltered, products }) {
         <div className="flex mr-4">
           <button
             onClick={() => setActiveCategory('tops')}
-            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
+            className="text-xs p-1 text-darkGreen border border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightGrey focus:ring-2 hover:bg-lightSage hover:underline active:bg-grayGreen active:font-extrabold"
           >
             tops
           </button>
@@ -33,7 +33,7 @@ function Search({ setActiveCategory, activeCategory, setFiltered, products }) {
         <div className="flex mr-4">
           <button
             onClick={() => setActiveCategory('pants')}
-            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
+            className="text-xs p-1 text-darkGreen border border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightGrey focus:ring-2 hover:bg-lightSage hover:underline active:bg-grayGreen active:font-extrabold"
           >
             bottoms
           </button>
@@ -41,7 +41,7 @@ function Search({ setActiveCategory, activeCategory, setFiltered, products }) {
         <div className="flex mr-4">
           <button
             onClick={() => setActiveCategory('outerwear')}
-            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
+            className="text-xs p-1 text-darkGreen border border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightGrey focus:ring-2 hover:bg-lightSage hover:underline active:bg-grayGreen active:font-extrabold"
           >
             outerwear
           </button>
@@ -49,7 +49,7 @@ function Search({ setActiveCategory, activeCategory, setFiltered, products }) {
         <div className="flex mr-4">
           <button
             onClick={() => setActiveCategory('decor')}
-            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
+            className="text-xs p-1 text-darkGreen border border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightGrey focus:ring-2 hover:bg-lightSage hover:underline active:bg-grayGreen active:font-extrabold"
           >
             decor
           </button>
@@ -57,7 +57,7 @@ function Search({ setActiveCategory, activeCategory, setFiltered, products }) {
         <div className="flex mr-4">
           <button
             onClick={() => setActiveCategory('lifestyle')}
-            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
+            className="text-xs p-1 text-darkGreen border border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightGrey focus:ring-2 hover:bg-lightSage hover:underline active:bg-grayGreen active:font-extrabold"
           >
             lifestyle
           </button>

@@ -6,7 +6,7 @@ function Hero() {
     <>
       <section
         id="home"
-        className="relative bg-[url(https://static.vecteezy.com/system/resources/previews/006/941/907/non_2x/continuous-single-line-book-and-plant-on-the-table-drawing-line-art-drawing-with-abstract-shape-plant-art-design-for-print-cover-wallpaper-vector.jpg)] bg-cover bg-center bg-no-repeat"
+        className="relative bg-[url(https://i.pinimg.com/originals/bf/23/13/bf2313f512b2aa9f8d58130796efd545.jpg)] bg-cover bg-center bg-no-repeat"
       >
         <div className="absolute inset-0 bg-white/90 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25 lg:bg-white/75"></div>
 

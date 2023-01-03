@@ -22,28 +22,26 @@ function ProductsScreen() {
   };
 
   return (
-    <div>
-      <section id="products" className="text-gray-600 body-font p-4">
-        <h1 className="text-darkSage text-center text-3xl underline decoration-dotted decoration-lightSage font-bold font-lato mb-1">
-          products
-        </h1>
-        <Search
-          products={products}
-          setFiltered={setFiltered}
-          activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
-        />
-        <div className="container pt-2 px-6 py-20 pb-4 mx-auto">
-          <div className="flex flex-wrap -m-4">
-            <div className="lg:w-1/4 md:w-1/3 md:p-4 p-6 w-1/2">
-              {filtered.map((product) => {
-                return <Product key={product.productID} product={product} />;
-              })}
-            </div>
+    <>
+      <div className="bg-white">
+        <div className="mx-auto max-w-2xl py-2 px-4 sm:py-2 sm:px-6 lg:max-w-7xl lg:px-8">
+          <h1 className="text-darkSage text-center text-3xl underline decoration-dotted decoration-lightSage font-bold font-lato mb-1">
+            products
+          </h1>
+          <Search
+            products={products}
+            setFiltered={setFiltered}
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+          />
+          <div className=" grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 pt-2">
+            {filtered.map((product) => {
+              return <Product key={product.productID} product={product} />;
+            })}
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
 }
 
