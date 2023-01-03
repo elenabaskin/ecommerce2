@@ -1,78 +1,66 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function Search() {
+function Search({ setActiveCategory, activeCategory, setFiltered, products }) {
+  useEffect(() => {
+    if (activeCategory === '*') {
+      setFiltered(products);
+      return;
+    }
+    const filtered = products.filter((product) =>
+      product.category.includes(activeCategory)
+    );
+    setFiltered(filtered);
+  }, [activeCategory, products, setFiltered]);
   return (
     <div>
-      <div className="flex content-center">
-        <div className="flex items-center mr-5">
-          <input
-            id="inline-checkbox"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-darkSage bg-offWhite rounded border-darkSage focus:ring-lightSage focus:ring-2"
-          />
-          <label
-            for="inline-checkbox"
-            className="ml-2 text-sm font-bold font-lato text-darkSage"
+      <div className="flex content-center items-center mx-auto">
+        <div className="flex mr-4">
+          <button
+            onClick={() => setActiveCategory('*')}
+            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
+          >
+            all
+          </button>
+        </div>
+        <div className="flex mr-4">
+          <button
+            onClick={() => setActiveCategory('tops')}
+            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
           >
             tops
-          </label>
+          </button>
         </div>
-        <div className="flex items-center mr-4">
-          <input
-            id="inline-checkbox"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-darkSage bg-offWhite rounded border-darkSage focus:ring-lightSage focus:ring-2"
-          />
-          <label
-            for="inline-checkbox"
-            className="ml-2 text-sm font-bold font-lato text-darkSage"
+        <div className="flex mr-4">
+          <button
+            onClick={() => setActiveCategory('bottoms')}
+            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
           >
             bottoms
-          </label>
+          </button>
         </div>
-        <div className="flex items-center mr-4">
-          <input
-            id="inline-checkbox"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-darkSage bg-offWhite rounded border-darkSage focus:ring-lightSage focus:ring-2"
-          />
-          <label
-            for="inline-checkbox"
-            className="ml-2 text-sm font-bold font-lato text-darkSage"
+        <div className="flex mr-4">
+          <button
+            onClick={() => setActiveCategory('outerwear')}
+            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
           >
             outerwear
-          </label>
+          </button>
         </div>
-        <div className="flex items-center mr-4">
-          <input
-            id="inline-checkbox"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-darkSage bg-offWhite rounded border-darkSage focus:ring-lightSage focus:ring-2"
-          />
-          <label
-            for="inline-checkbox"
-            className="ml-2 text-sm font-bold font-lato text-darkSage"
+        <div className="flex mr-4">
+          <button
+            onClick={() => setActiveCategory('decor')}
+            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
           >
             decor
-          </label>
+          </button>
         </div>
-        <div className="flex items-center mr-4">
-          <input
-            id="inline-checkbox"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-darkSage bg-offWhite rounded border-darkSage focus:ring-lightSage focus:ring-2"
-          />
-          <label
-            for="inline-checkbox"
-            className="ml-2 text-sm font-bold font-lato text-darkSage"
+        <div className="flex mr-4">
+          <button
+            onClick={() => setActiveCategory('lifestyle')}
+            className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
           >
             lifestyle
-          </label>
+          </button>
         </div>
       </div>
     </div>
