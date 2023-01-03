@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Product from '../components/Product';
 import Search from '../components/Search';
+import axios from 'axios';
 
 function ProductsScreen() {
   const [products, setProducts] = useState([]);
@@ -12,12 +13,12 @@ function ProductsScreen() {
   }, []);
 
   const fetchProducts = async () => {
-    const data = await fetch('http://localhost:8080/products');
-    const product = await data.json();
+    const res = await axios('http://localhost:8080/products');
+    setProducts(res.data);
 
-    console.log(product);
-    setProducts(product.results);
-    setFiltered(product.results);
+    // console.log(product);
+    setProducts(res.data);
+    setFiltered(res.data);
   };
 
   return (

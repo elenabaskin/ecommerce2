@@ -10,7 +10,7 @@ function Search({ setActiveCategory, activeCategory, setFiltered, products }) {
       product.category.includes(activeCategory)
     );
     setFiltered(filtered);
-  }, [activeCategory, products, setFiltered]);
+  }, [activeCategory]);
   return (
     <div>
       <div className="flex content-center items-center mx-auto">
@@ -32,7 +32,7 @@ function Search({ setActiveCategory, activeCategory, setFiltered, products }) {
         </div>
         <div className="flex mr-4">
           <button
-            onClick={() => setActiveCategory('bottoms')}
+            onClick={() => setActiveCategory('pants')}
             className="p-1 text-darkGreen border-2 border-solid border-darkSage font-lato rounded border-darkSage focus:ring-lightSage focus:ring-2 hover:bg-lightSage hover:underline"
           >
             bottoms
