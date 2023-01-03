@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Rating from './Rating';
 
 // destructuring instead of passing in props
 function Product({ product }) {
   return (
     <div id="products">
-      <Link
+      {/* <Link
         className="block relative h-40 rounded overflow-hidden aspect-square md:h-48 lg:h-60"
         to={`/product/${product.productID}`}
-      >
-        <img src={product.image} alt={product.name} />
-      </Link>
+      > */}
+      <img src={product.image} alt={product.name} />
+      {/* </Link> */}
 
       <div className="mt-2">
         <p className="text-xs font-lato text-darkGreen tracking-widest">
